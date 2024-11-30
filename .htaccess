@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/([a-z-]+)/$ index.php?urlAPI=$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-z-]+)/([a-zA0-9-]+)/$ index.php?url=$1&identifiant=$2
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1
